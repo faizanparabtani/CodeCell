@@ -3,22 +3,24 @@
 
 void main()
 {
-    int i, sumo;
+    int i, sumo, ans;
     sumo = 0;
+    ans = 0;
     for(i = 1; i<=200; i++)
     {
         sumo += i;
         if(i == 10)
         {
-            printf("(%d+", sumo);
+            ans += sumo;
         }
         else if(i == 100)
         {
-            printf("%d+", sumo);
+            ans += sumo;
         }
         else if(i == 200)
         {
-            printf("%d)", sumo);
+            ans += sumo;
         }
     }
+    printf("%d", ans);
 }
