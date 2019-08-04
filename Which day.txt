@@ -1,0 +1,6 @@
+d = int(input('Enter day'))
+m = int(input('Enter month'))
+y = int(input('Enter Year'))
+x = d + (31 * (m-1)) + (365 * (y-1)) - 1
+ans = x % 7
+print(ans)
