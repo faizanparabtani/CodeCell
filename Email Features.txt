@@ -12,11 +12,9 @@ def checker(a):
                 string = ''.join(new)
                 if string not in b:
                     b.append(string)
-                    print(string)
         elif '.' in i:
             new = i.replace('.', '', 5)
             string = ''.join(new)
             if string not in b:
                 b.append(string)
-                print(string)
     return len(b)
