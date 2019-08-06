@@ -1,0 +1,22 @@
+def checker(a):
+    b = []
+    for i in a:
+        if '+' in i:
+            front = i.rsplit('+')
+            back = i.rsplit('@')
+            j1 = ''.join(front[0])
+            j2 = ''.join(back[1])
+            j3 = j1 + '@' + j2
+            if '.' in j3:
+                new = j3.replace('.', '', 5)
+                string = ''.join(new)
+                if string not in b:
+                    b.append(string)
+                    print(string)
+        elif '.' in i:
+            new = i.replace('.', '', 5)
+            string = ''.join(new)
+            if string not in b:
+                b.append(string)
+                print(string)
+    return len(b)
