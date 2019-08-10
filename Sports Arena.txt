@@ -1,0 +1,26 @@
+def amount(a):
+    if a < 2048:
+        binary = bin(a)
+        new = binary.split('b')
+        ans = new[1]
+        ans1 = ans.count('1')
+    elif a < 0:
+        print('Invalid input')
+    else:
+        count = 0
+        while a > 0:
+            a = a // 2048
+            count += 1
+            if a != 0:
+                lis.append(a)
+    return lis
+
+
+multiply = 1
+print('Number of inputs: ')
+n = int(input())
+for i in range(n):
+    new = amount(int(input()))
+    for j in new:
+        multiply *= j
+print(multiply)
